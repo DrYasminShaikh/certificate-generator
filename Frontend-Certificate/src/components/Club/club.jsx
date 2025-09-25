@@ -6,7 +6,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Header from '../home/Header';
 import Footer from '../home/Footer';
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // Club data with icons
 const clubs = [

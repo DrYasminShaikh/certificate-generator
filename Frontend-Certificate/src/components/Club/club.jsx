@@ -63,11 +63,16 @@ export default function ClubEventForm() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const carouselRef = useRef(null);
 
- const token = localStorage.getItem("token");
+  const navigate = useNavigate();
+
+ useEffect(() => {
+  const token = localStorage.getItem("token");
 
   if (!token) {
-    return <Navigate to="/login" replace />;
+    navigate("/login", { replace: true});
   }
+  console.log("token found: ", token);
+ },[])
 
   // Handle form input changes
   const handleChange = (e) => {

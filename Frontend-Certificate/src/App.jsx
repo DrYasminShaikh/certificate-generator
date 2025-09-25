@@ -42,7 +42,7 @@ function App() {
         <Route path="/Login" element={<Login/>} /> */}
         <Route path="/editor" element={<Editor/>}/>
         <Route path="/CertificateSearch" element={<CertificateSearch />}/>
-        <Route path="/club" element={<ClubEventForm/>} />
+        {token && <Route path="/club" element={<ClubEventForm/>} />}
 
 
          {/* Admin Routes */}
